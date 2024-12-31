@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "workspaces": [
+    "src/*"
+  ],
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "composer": "composer install --ignore-platform-req=ext-pcntl --ignore-platform-req=ext-imagick --ignore-platform-req=ext-posix",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run publish && npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "svg": "./node_modules/.bin/vsvg -s ./resources/svg -t ./resources/js/svg-icons/vue",
+    "publish": "php artisan module:publish"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.1",
+    "gulp-util": "^3.0.8",
+    "playwright": "^1.10.0",
+    "popper.js": "^1.12"
+  },
+  "dependencies": {
+    "apexcharts": "^3.10.1",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.1.0",
+    "jexcel": "^3.5.0",
+    "laravel-echo": "^1.5.4",
+    "laravel-vue-semantic-ui-pagination": "^1.0.3",
+    "portal-vue": "^2.1.6",
+    "pusher-js": "^5.0.1",
+    "semantic-ui": "^2.4.2",
+    "semantic-ui-vue": "^0.11.0",
+    "util.promisify": "^1.1.1",
+    "vue": "^2.6.10",
+    "vue-apexcharts": "^1.5.1",
+    "vue-backtotop": "^1.6.1",
+    "vue-confirm-dialog": "^1.0.2",
+    "vue-debounce": "^2.1.0",
+    "vue-directive-tooltip": "^1.6.3",
+    "vue-infinite-loading": "^2.4.4",
+    "vue-mq": "^1.0.1",
+    "vue-multiselect": "^2.1.6",
+    "vue-progress-path": "^0.0.2",
+    "vue2-daterange-picker": "^0.6.2",
+    "vue2-editor": "^2.10.0",
+    "vuejs-datepicker": "^1.6.2"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.10",
+    "del": "6.1"
+  },
+  "version": "0.0.0"
+}
